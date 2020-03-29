@@ -15,7 +15,7 @@ module.exports = (sequelize,Sequelize)=>{
     }
 },{
     freezeTableName:true,
-    tablename: "HistoryPassword",
+    tablename: "Contact",
     timestamps: false})
     return Contact
 }

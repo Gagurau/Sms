@@ -17,6 +17,9 @@ module.exports = (sequelize,Sequelize)=>{
         },
         password:{
             type:Sequelize.STRING(200)
+        },
+        active:{
+            type:Sequelize.INTEGER
         }
     },{
         freezeTableName:true,

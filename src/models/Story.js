@@ -19,7 +19,7 @@ module.exports = (sequelize,Sequelize) =>{
         type:Sequelize.INTEGER
     }},{
     freezeTableName:true,
-    tablename: "HistoryPassword",
+    tablename: "Story",
     timestamps: false})
     return Story
 }
