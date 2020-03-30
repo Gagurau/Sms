@@ -2,7 +2,7 @@ module.exports = (sequelize,Sequelize)=>{
     const Contact = sequelize.define("Contact",{
     id:{
         type:Sequelize.INTEGER,
-        autoincrement:true,
+        autoIncrement:true,
         primaryKey:true        
     },
     idSrc:{

@@ -2,7 +2,7 @@ module.exports = (sequelize, Sequelize) =>{
     const Profile = sequelize.define("Profile",{
         id:{
             type:Sequelize.INTEGER,
-            autoincrement:true,
+            autoIncrement:true,
             primaryKey:true
         },
         image:{

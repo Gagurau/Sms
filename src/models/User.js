@@ -3,7 +3,7 @@ module.exports = (sequelize,Sequelize)=>{
         id:{
             type:Sequelize.INTEGER,
             primaryKey:true,
-            autoincrement:true
+            autoIncrement:true
         },
         name:{
             type:Sequelize.STRING(200)

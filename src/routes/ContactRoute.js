@@ -1,7 +1,11 @@
-const router = require('express').Router()
+const express = require('express') 
+const router = express.Router()
+const contact = require ('../controllers/ContactController')
 
 router.get ('/', (req,res)=>{
     res.send("funciona")
 })
+router.get ('/:id', contact.findByPk)
 
+router.post('/create', contact.create)
 module.exports = router

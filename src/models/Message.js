@@ -2,7 +2,7 @@ module.exports = (sequelize, Sequelize)=>{
     const Message = sequelize.define("Message",{
         id:{
             type:Sequelize.INTEGER,
-            autoincrement: true,
+            autoIncrement: true,
             primaryKey:true
         },
         idSrc:{

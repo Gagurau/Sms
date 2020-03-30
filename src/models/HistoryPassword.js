@@ -2,7 +2,7 @@ module.exports = (sequelize, Sequelize)=>{
     const HistoryPassword = sequelize.define("HistoryPassword",{
         id:{
             type:Sequelize.INTEGER,
-            autoincrement: true,
+            autoIncrement: true,
             primaryKey:true
         },
         password:{
