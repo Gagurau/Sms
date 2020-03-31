@@ -13,4 +13,6 @@ router.delete('/delete/:id', contact.del)
 
 router.put('/update/:id', contact.update)
 
+router.get('/all/:idSrc', contact.findByUser)
+
 module.exports = router

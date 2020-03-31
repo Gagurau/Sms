@@ -43,5 +43,13 @@ exports.update = async function(req,res){
     }else{
         res.status(404).send(("Contato não encontrado"))
     }
-    
+},
+exports.findByUser = async function (req,res){
+    contact = await Contact.findAll({where:{idSrc: req.params.idSrc}})
+    console.log(contact)
+    if (contact){
+        res.status(200).send(contact)
+    }else{
+        res.status(404).send("Contatos não encontrados")
+    }
 }
