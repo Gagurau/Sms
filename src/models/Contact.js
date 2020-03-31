@@ -5,14 +5,14 @@ module.exports = (sequelize,Sequelize)=>{
         autoIncrement:true,
         primaryKey:true        
     },
-    idSrc:{
-        foreignKey:true,
-        type:Sequelize.INTEGER
-    },
-    idDst:{
-        foreignKey:true,
-        type:Sequelize.INTEGER
-    }
+    // idSrcs:{
+    //     foreignKey:true,
+    //     type:Sequelize.INTEGER
+    // },
+    // idDst:{
+    //     foreignKey:true,
+    //     type:Sequelize.INTEGER
+    //}
 },{
     freezeTableName:true,
     tablename: "Contact",

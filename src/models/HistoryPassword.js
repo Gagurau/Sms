@@ -7,12 +7,7 @@ module.exports = (sequelize, Sequelize)=>{
         },
         password:{
             type:Sequelize.STRING(200)
-        },
-        idUser:{
-            type:Sequelize.INTEGER,
-            foreignKey: true
         }
-
     },{
         freezeTableName:true,
         tablename: "HistoryPassword",

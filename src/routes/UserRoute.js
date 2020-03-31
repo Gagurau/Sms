@@ -4,7 +4,7 @@ const user = require('../controllers/UserController')
 
 
 router.get ('/', (req,res) =>{
-    res.send("teste")
+    res.send("user")
 })
 router.post('/create', user.create)
 

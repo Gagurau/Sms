@@ -2,20 +2,18 @@ const db = require ('../config/db.config')
 const HistoryPasssword = db.historyPassword
 
 exports.create = async function (req, res){
-        const history = await HistoryPasssword.create(req.body)
-        .then(function(){
-        res.status(201).send(history)})
-    .catch(function(err){
-            res.status(400)
-    })
-}
-
-exports.findById = async function(req, res){
-    const history = await HistoryPasssword.findByPk(req.body.id)
+    HistoryPasssword.create(req.body)
     .then(function(){
-        req.status(200).send(history)
+        res.status(201).send(req.body)})
+    .catch(function(err){
+        res.status(400).send(err)
     })
-    .catch(function(erro){
-        req.status(404).send("Password não cadastrado")
-    })
+},
+exports.findByPk = async function(req, res){
+    const history = await HistoryPasssword.findByPk(req.params.id)
+    if (history){    
+        res.status(200).send(history)
+    }else{
+        re.status(404).send("Password não cadastrado")
+    }
 }

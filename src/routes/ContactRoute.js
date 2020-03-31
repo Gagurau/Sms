@@ -8,4 +8,9 @@ router.get ('/', (req,res)=>{
 router.get ('/:id', contact.findByPk)
 
 router.post('/create', contact.create)
+
+router.delete('/delete/:id', contact.del)
+
+router.put('/update/:id', contact.update)
+
 module.exports = router

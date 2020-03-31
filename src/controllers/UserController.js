@@ -46,22 +46,25 @@ exports.login = async function (req, res){
     })},
 
 exports.update = async function(req,res){
-    var body = req.body
-    console.log(body)
-    User.update({
-    name: body.name,
-    username: body.username,
-    email: body.email,
-    password: body.password,
-    active: body.active 
-    },{
-        where: {id: body.id}
-    })
-    .then(function(){
-        res.status(200).send(body)}
-    
-    )
-    },
+    var user = await User.findByPk(req.params.id)
+    if (user){
+        var body = req.body
+        User.update({
+        name: body.name,
+        username: body.username,
+        email: body.email,
+        password: body.password,
+        active: body.active 
+        },{
+            where: {id: req.params.id}
+        })
+        .then(function(){
+            res.status(200).send(body)
+        })
+    }else{
+        res.status(404).send("Usuário não encontrado")
+    }
+},
 
 // exports.auth = async function (req, res){
 //     body = req.body
@@ -83,7 +86,6 @@ exports.update = async function(req,res){
 
 exports.findByPk = async function(req,res){
     const user = await User.findByPk(req.params.id)
-    console.log(user)
     if (user){
         id = user.id
         // var token = jwt.sign(

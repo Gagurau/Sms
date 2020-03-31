@@ -7,12 +7,9 @@ module.exports = (sequelize, Sequelize) =>{
         },
         image:{
             type:Sequelize.BLOB
-        },
-        idUser:{
-            type:Sequelize.INTEGER,
-            foreignKey:true
         }
-    },{
+    },
+    {
         freezeTableName:true,
         tablename: "Profile",
         timestamps: false
