@@ -46,7 +46,6 @@ exports.update = async function(req,res){
 },
 exports.findByUser = async function (req,res){
     contact = await Contact.findAll({where:{idSrc: req.params.idSrc}})
-    console.log(contact)
     if (contact){
         res.status(200).send(contact)
     }else{
